@@ -19,4 +19,4 @@ En este primera práctica/reto tenemos que conseguir que, a través de programac
 
 
 
-<video src="https://raw.githubusercontent.com/nitropungos3000/TU_REPOSITTORIO/main/1.%20Pasos%20previos/V%C3%ADdeos/GRABACI%C3%93N%20RETO%201.mp4" controls width="100%"></video>
+<video src="https://raw.githubusercontent.com/nitropungos3000/Robotica-Y-Vision-Artificial-4-ESO/main/1. Pasos previos/V%C3%ADdeos/GRABACI%C3%93N%20RETO%201.mp4" controls width="100%"></video>
