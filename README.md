@@ -8,7 +8,7 @@ Bienvenidos a mi cuaderno de ingeniería para la asignatura de Robótica y Visi�
 
 | Nombre del proyecto | Imagen relacionada | Enlace a la carpeta |
 | --- | --- | --- |
-| `Pasos previos` | --- | [Pincha aquí](https://github.com/nitropungos3000/Robotica-Y-Vision-Artificial-4-ESO/tree/main/1.%20Pasos%20previos) |
+| `Pasos previos` | <img src="Imágenes/ARDUINO Y COMPONENTES.png" width="450" height="450" /> | [Pincha aquí](https://github.com/nitropungos3000/Robotica-Y-Vision-Artificial-4-ESO/tree/main/1.%20Pasos%20previos) |
 | --- | --- | --- |
 | --- | --- | --- |
 | --- | --- | --- |
