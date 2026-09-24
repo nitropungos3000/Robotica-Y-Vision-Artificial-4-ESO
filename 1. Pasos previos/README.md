@@ -15,20 +15,6 @@ A continuación, procedo a explicar el montaje físico (en este caso en el simul
 <img src="Imágenes/MONTAJE RETO 1 ROBÓTICA.png" width="450" height="400" />
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Como podemos observar, los diodos tienen dos patillas. Fuera de la simulación, una patilla es más larga para distinguir el lado positivo (Ánodo) y la más corta para el negativo (Cátodo). Al ánodo conectamos el cable ya conectado al pin correspondiente de cada diodo, el cual da igual el orden. Al cátodo, conectamos la resistencia, un pequeño componente electrónico que sirve para que el diodo tenga una sobrecarga y pueda estropearse, opone resistencia, como dice su nombre. La resistencia la medimos en Ohmios (Ω).  Podemos hacer el montaje con dos resistencias, cada una conectada a un diodo, pero también se pude hacer con solo una, como he decidido yo hacerlo. De la placa de Arduino tenemos que sacar un cable del pin GND (tierra-negativo), que debemos conectar a las resistencias o a la línea de pines negativa de la protoboard, que esta nos ayuda a conectar de manera más fácil los componentes de nuestra práctica. Como observamos, se saca un cable de GND a la línea de pines negativos de la protoboard y ya de ahí se sacan los cables a los diodos. Finalmente, posterior a esto podemos ver un vídeo con el reto realizado y completado.
 
 https://github.com/user-attachments/assets/2a253130-8973-4ee6-ae37-25e71c7ca700
