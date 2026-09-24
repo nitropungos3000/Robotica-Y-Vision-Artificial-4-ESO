@@ -9,7 +9,11 @@ Lo primero que nos encontramos en el programa es el llamado ``void setup()``. Es
 <img src="Imágenes/CÓDIGO RETO 1.png" width="600" height="400" />
 </p>
 
+A continuación, procedo a explicar el montaje físico (en este caso en el simulador de Tinkercad) a partir de la siguiente imagen:
 
+<p align="center">
+<img src="Imágenes/MONTAJE RETO 1 ROBÓTICA.png" width="600" height="400" />
+</p>
 
 
 
