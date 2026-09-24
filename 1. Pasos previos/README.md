@@ -16,3 +16,7 @@ En este primera práctica/reto tenemos que conseguir que, a través de programac
   digitalWrite(2, HIGH);
   delay(1000); 
 }``
+
+
+
+<video src="https://raw.githubusercontent.com/nitropungos3000/TU_REPOSITTORIO/main/1.%20Pasos%20previos/V%C3%ADdeos/GRABACI%C3%93N%20RETO%201.mp4" controls width="100%"></video>
