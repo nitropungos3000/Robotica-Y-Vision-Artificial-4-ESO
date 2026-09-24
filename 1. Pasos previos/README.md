@@ -21,3 +21,5 @@ En este primera práctica/reto tenemos que conseguir que, a través de programac
 <video width="100%" controls>
   <source src="Vídeos/GRABACIÓN RETO 1.mp4" type="video/mp4">
 </video>
+
+https://github.com/user-attachments/assets/2a253130-8973-4ee6-ae37-25e71c7ca700
