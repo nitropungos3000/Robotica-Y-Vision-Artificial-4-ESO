@@ -43,5 +43,16 @@ Para esta práctica vamos a, utilizando un pulsador que ahora voy a proceder a e
 
 ·Tenemos que utilizar variables. Estas variables son un espacio que guarda la placa de Arduino para almacenar información. Para entenderlo mejor, imaginemos que esa variable es una caja en la que guardamos cosas, que podemos sacar y meter, refiriéndonos también a que esa información puede cambiar durante el código. En este caso vamos a utilizar una variable de tipo ``int``, pero hay muchas más. Podemos crearla y darle un valor o podemos dejarla sin valor para ir añadiéndole información durante el programa. Hemos creado una variable por cada uno de los componentes, y otra más para añadir el estado del pulsador, utrilizando un comando que veremos ahora. Para añadir valores a la variable tenemos un ejemplo: ``int LED1 = 1;``. Hemos puesto un nombre a la variable, ese nombre debemos de escribirlo cada vez que queramos referirnos al valor del pin del componente que queremos utilizar, por si se nos olvida en qué pin se encuentra. Podemos aplicarlo al ``pinMode``, explicado anteriormente en el anterior reto, o al ``digitalWrite``, teniendo como ejemplos los siguientes: ``digitalWrite(LED1, HIGH);``, ``pinMode(pulsador, HIGH);``. 
 
-·Debemos de utilizar un pulsador. Un pulsador es un botón mecánico que deja pasar la corriente miestras este se encuentra accionado, es decir, que puede transmitir información digital (HIGH o LOW, encendido o apagado, 1 o 0), con la que podemos hacer diversas cosas como lo que vamos a hacer en la práctica, el encendido, o en este caso apagado, de los diodos LED. Hay varios tipos de botones, los normalmente abiertos (NA, o NO en inglés, normally open) y los normalmente cerrados. La diferencia entre estos dos es que el primero normalmente se encuentra el LOW y cuando lo acciones está en HIGH, y el otro es al revés. Estos, tienen un muelle que permite accionar el botón para permitir el paso de corriente y enviar la señal.
+·Debemos de utilizar un pulsador. Un pulsador es un botón mecánico que deja pasar la corriente miestras este se encuentra accionado, es decir, que puede transmitir información digital (``HIGH`` o ``LOW``, encendido o apagado, ``1`` o ``0``), con la que podemos hacer diversas cosas como lo que vamos a hacer en la práctica, el encendido, o en este caso apagado, de los diodos LED. Hay varios tipos de botones, los normalmente abiertos (NA, o NO en inglés, normally open) y los normalmente cerrados. La diferencia entre estos dos es que el primero normalmente se encuentra el ``LOW`` y cuando lo acciones está en ``HIGH``, y el otro es al revés. Estos, tienen un muelle que permite accionar el botón para permitir el paso de corriente y enviar la señal.
 
+·Hemos aprendido a utilizar las condiciones, los conocidos ``if`` (lo mismo que si pusieras una condición en inglés). Esto básicamente lo que hace es poner una condición, como su nombre indica. Si ocurre tal situción, que suceda lo que tú quieras. En este caso, debemos colocar ``if`` en el código, seguido de un paréntesis poniendo la condición que tiene que ocurrir, y después dentro de llaves lo que queremos que ocurra si pasa eso. Lo pongo por aquí en ejemplo: 
+
+``if (pulsadorlectura == HIGH){``
+
+``digitalWrite(LED1, LOW);``
+
+``digitalWrite(LED2, LOW);``
+
+``}``
+
+Como podéis observar, así se vería el uso de variables y del ``if`` en el código. Lo veremos ahora todo en conjunto en la captura del código. 
