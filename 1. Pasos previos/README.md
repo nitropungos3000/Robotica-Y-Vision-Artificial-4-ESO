@@ -76,11 +76,13 @@ Ahora, procedemos a ver el montaje, ya para finalizar.
 <img src="Imágenes/MONTAJE RETO 2.png" width="450" height="400" />
 </p>
 
+Como podemos observar, tenemos los mismos dos diodos que en la práctica anterior, solo que les hemos añadido el pulsador y una resistencia de protección. El pulsador tiene dos filas de pines, una fila la debemos conectar a la resistencia de protección (que debe de ir conectada al GND) junto con el pin al que vayamos a conectar el pulsador, y después la otra línea la debemos conectar al pin de 5V, que básicamente proporciona energía. Es un montaje muy sencillo para una práctica muy sencilla. Por aquí debajo dejo un vídeo donde se puede observar cómo funciona:
 
 
+[![](https://img.youtube.com/vi/-WE_l8MV6Dg/0.jpg)](https://www.youtube.com/watch?v=-WE_l8MV6Dg)
 
 
-
+Este reto corresponde al apartado 3 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](http://kio4.com/arduino/index.htm)
 
 
 
