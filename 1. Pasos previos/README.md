@@ -67,6 +67,14 @@ Ahora, vemos a ver el código completo.
 </p>
 
 
+Al principio del todo, he colocado las distintas variables que necesitaba para la práctica, siempre se ponen antes del ``void setup``. Posteriormente, he puesto el ``void setup``, declarando los pines de cada uno de los componentes. Después, el ``void loop``, en el que lo primero que tenemos que poner es el ``digitalRead``, para que esté todo el rato leyendo los valores del pulsador, y que lo meta en la variable ``pulsadorlectura``. Para finalizar, colocamos dos ``if``, uno que explica que, si el pulsador se encuentra en ``LOW``, los diodos deben estar encendidos, y otro que es al revés. Después, ponemos nuestras correspondientes llaves y el programa está finalizado. Debemos empezar ya a tabular, que consiste en diferenciar qué parte del programa va con cual, insertando espacios. 
+
+
+Ahora, procedemos a ver el montaje, ya para finalizar.
+
+<p align="center">
+<img src="Imágenes/MONTAJE RETO 2.png" width="450" height="400" />
+</p>
 
 
 
