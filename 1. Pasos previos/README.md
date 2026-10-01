@@ -60,7 +60,7 @@ Como podéis observar, así se vería el uso de variables y del ``if`` en el có
 Ahora, vemos a ver el código completo.
 
 <p align="center">
-<img src="Imágenes/CÓDIGO RETO 2.PNG" width="450" height="400" />
+<img src="Imágenes/CÓDIGO RETO 2 SIN PULLUP.png" width="450" height="400" />
 </p>
 
 
