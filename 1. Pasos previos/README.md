@@ -45,7 +45,7 @@ Para esta práctica vamos a, utilizando un pulsador que ahora voy a proceder a e
 
 ·Debemos de utilizar un pulsador. Un pulsador es un botón mecánico que deja pasar la corriente miestras este se encuentra accionado, es decir, que puede transmitir información digital (``HIGH`` o ``LOW``, encendido o apagado, ``1`` o ``0``), con la que podemos hacer diversas cosas como lo que vamos a hacer en la práctica, el encendido, o en este caso apagado, de los diodos LED. Hay varios tipos de botones, los normalmente abiertos (NA, o NO en inglés, normally open) y los normalmente cerrados. La diferencia entre estos dos es que el primero normalmente se encuentra el ``LOW`` y cuando lo acciones está en ``HIGH``, y el otro es al revés. Estos, tienen un muelle que permite accionar el botón para permitir el paso de corriente y enviar la señal.
 
-·Hemos aprendido a utilizar las condiciones, los conocidos ``if`` (lo mismo que si pusieras una condición en inglés). Esto básicamente lo que hace es poner una condición, como su nombre indica. Si ocurre tal situción, que suceda lo que tú quieras. En este caso, debemos colocar ``if`` en el código, seguido de un paréntesis poniendo la condición que tiene que ocurrir, y después dentro de llaves lo que queremos que ocurra si pasa eso. Lo pongo por aquí en ejemplo: 
+·Hemos aprendido a utilizar las condiciones, los conocidos ``if`` (lo mismo que si pusieras una condición en inglés). Esto básicamente lo que hace es poner una condición, como su nombre indica. Si ocurre tal situción, que suceda lo que tú quieras. En este caso, debemos colocar ``if`` en el código, seguido de un paréntesis poniendo la condición que tiene que ocurrir, y después dentro de llaves lo que queremos que ocurra si pasa eso. En el paréntesis, debemos de poner dos iguales antes de decir el componente o variable que queremos leer y el valor en el que esté, para que los compare. Lo pongo por aquí en ejemplo: 
 
 ``if (pulsadorlectura == HIGH){``
 
@@ -56,3 +56,32 @@ Para esta práctica vamos a, utilizando un pulsador que ahora voy a proceder a e
 ``}``
 
 Como podéis observar, así se vería el uso de variables y del ``if`` en el código. Lo veremos ahora todo en conjunto en la captura del código. 
+
+
+·Ya, para finalizar las condiciones, tenemos el uso del ``digitalRead``. Este, básicamente sirve para leer un valor de cualquier elemento que tú le ordenes que lea, y posteriormente lo introduce en una variable. Un ejemplo es el siguiente: ``pulsadorlectura = digitalRead(pulsador);``
+
+Ahora, vemos a ver el código completo.
+
+<p align="center">
+<img src="Imágenes/CÓDIGO RETO 2.png" width="450" height="400" />
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
