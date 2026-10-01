@@ -30,4 +30,4 @@ https://github.com/user-attachments/assets/2a253130-8973-4ee6-ae37-25e71c7ca700
 
 [![](https://img.youtube.com/vi/2f6OHwZokGQ/0.jpg)](https://www.youtube.com/watch?v=2f6OHwZokGQ)
 
-Este reto corresponde al apartado 2
+Este reto corresponde al apartado 2 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](http://kio4.com/arduino/index.htm)
