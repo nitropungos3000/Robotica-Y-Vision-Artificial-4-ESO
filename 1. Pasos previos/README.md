@@ -27,7 +27,7 @@ Como podemos observar, los diodos tienen dos patillas. Fuera de la simulación, 
 
 [![](https://img.youtube.com/vi/2f6OHwZokGQ/0.jpg)](https://www.youtube.com/watch?v=2f6OHwZokGQ)
 
-Este reto corresponde al apartado 2 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](http://kio4.com/arduino/index.htm)
+Este reto corresponde al apartado 2 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información]((https://kio4.com/arduino/2protoboard.htm))
 
 
 # Reto 2: Encendido de diodos LED utilizando un pulsador
@@ -79,7 +79,7 @@ Como podemos observar, tenemos los mismos dos diodos que en la práctica anterio
 [![](https://img.youtube.com/vi/-WE_l8MV6Dg/0.jpg)](https://www.youtube.com/watch?v=-WE_l8MV6Dg)
 
 
-Este reto corresponde al apartado 3 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](http://kio4.com/arduino/index.htm)
+Este reto corresponde al apartado 3 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](https://kio4.com/arduino/3entradasalida.htm)
 
 
 
