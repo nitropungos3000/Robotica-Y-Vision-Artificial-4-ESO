@@ -78,6 +78,10 @@ Como podemos observar, tenemos los mismos dos diodos que en la práctica anterio
 
 [![](https://img.youtube.com/vi/-WE_l8MV6Dg/0.jpg)](https://www.youtube.com/watch?v=-WE_l8MV6Dg)
 
+<p align="center">
+<img src="Imágenes/Diagrama de Flujo Reto 2.png" width="400" height="450" />
+</p>
+
 
 Este reto corresponde al apartado 3 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](https://kio4.com/arduino/3entradasalida.htm)
 
