@@ -85,7 +85,19 @@ Como podemos observar, tenemos los mismos dos diodos que en la práctica anterio
 
 Este reto corresponde al apartado 3 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](https://kio4.com/arduino/3entradasalida.htm)
 
+# Reto 3: Lectura de valores del potenciómetro
 
+En este reto nos vamos a basar únicamente en la lectura de valores de un potenciómetro. Para saber cómo realizarla, lo primero que debemos de saber es qué es un potenciómetro. Un potenciómetro es un componente electrónico con una resistencia variable cuyo valor se puede ajustar manualmente. Tiene dos terminales fijos conectados a unos extremos de una pista resistiva interna y un terminal central móvil, llamado cursor. Al girar una perilla o mover un deslizador, el cursor cambia de posición sobre la pista resistiva. Esto divide el voltaje de entrada y ofrece una fracción ajustable en la salida. Si se utiliza un solo cursor y uno de los terminales extremos, funciona como una resistencia variable tradicional. Este ya no es un componente digital, es analógico. Esto significa que no tiene únicamente 2 valores, tiene bastantes más. Estos varían dependidendo del componente que estamos utilizando. Se colocan en los pines analógicos (A0, A1, A2, A3, A4 y A5). Según la posición en la que se encuentre, tendrá un valor. Este tiene 1024 valores, que oscilan entre 0 y 1023.
+
+Para esta práctica solo vamos a utilizar cables, la placa y el potenciómetro, pero sí que hay elementos nuevos en el código que debo de explicar. 
+
+Lo primero que debemos de colocar en nuestro código es la variable en la que vamos a incluir los valores que lea el potenciómetro. Creamos una variable ``int`` o ``float`` (números con decimales) y la llamamos como queramos. Un ejemplo: ``int valorpot;``. Ahora, podríamos crear una variable en la que incluyamos en qué pin vamos a colocar nuestro potenciómetro, pero no hace falta. En este caso lo hemos colocado en el A0. Creamos la variable como ejemplo: ``int pot=A0`` o ``float pot=A0``. No olvidemos que tenemos que declarar el pin detrás de un igual y poner el punto y coma al final.
+
+Ahora pasamos al ``void setup``. Al ser un componente analógico, no hace falta declarar en ningún momento el pin, solo le debemos decir a un comando de dónde tiene que leer loa valores, que ahora vamos a ver. Lo único que vamos a poner es ``Serial.begin(9600);``. Esto es para utilizar el monitor serie. Es una ventana del software que actúa como un canal de chat directo entre tu ordenador y la placa Arduino a través del cable USB. La placa nos va a mandar los valores que lea del potenciómetro y nos lo va a mostrar en la pantalla de nuestro ordenador. Lo que hace este comando es imponer la velocidad del envío de datos, en este caso, con 9600 baudios (es con lo que se mide) es suficiente. 
+
+Finalmente, tenemos el ``void loop``, donde nos encontramos dos únicos elementos, y los dos son nuevos. Primero, tenemos que utilizar la variable que hemos creado antes donde íbamos a guardar los valores que nos otorgara el potenciómetro. Para meter los valores en la variable, debemos de utilizar lo siguiente: ``analogRead(pot);``. Esto le dice al Arduino que lea los valores del potenciómetro. Para que los meta en la variable, debemos de poner: ``valorpot=analogRead(pot);``. Ponemos un igual detrás del nombre de la variable y ponemos el comando. Así incluimos los valores dentro de la variable. El segundo comando es ``Serial.println(valorpot);``. Esto utiliza el monitor serie, y le indica a la placa que los valores que lea del potenciómetro y que incluya dentro de la variable se muestren en el monitor. El ``ln`` detrás de ``print`` indica que se escriban los valores en el monitor en líneas unas debajo de las otras.
+
+Así quedaría finalmente el código:
 
 
 
