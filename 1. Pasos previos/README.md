@@ -118,7 +118,7 @@ Vale, ahora utilizamos ponemos todo lo del reto anterior en su correspondiente s
 Aquí debajo vemos el código completo de cómo quedaría: 
 
 <p align="center">
-<img src="Imágenes/CÓDIGO RETO 4.png" width="400" height="450" />
+<img src="Imágenes/CÓDIGO RETO 4.PNG" width="400" height="450" />
 </p>
 
 Y aquí un vídeo de como funciona con el monitor serie:
