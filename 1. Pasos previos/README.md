@@ -99,7 +99,9 @@ Finalmente, tenemos el ``void loop``, donde nos encontramos dos únicos elemento
 
 Así quedaría finalmente el código:
 
-
+<p align="center">
+<img src="Imágenes/CÓDIGO RETO 3.png" width="400" height="450" />
+</p>
 
 
 
