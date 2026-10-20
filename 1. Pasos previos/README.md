@@ -111,7 +111,19 @@ Y aquí tenemos un vídeo de cómo funciona el montaje y cómo se ven en el moni
 
 # Reto 4: Mapeado de valores con potenciómetro
 
-Este reto en muy sencillo, es el previo paso al reto siguiente. Tenemos que reutilizar todo lo del reto anterior, pero incluyendo un nuevo comando, el mapeado. El mapeado consiste en convertir o escalar un valor desde un rango original a un rango diferente. Por defecto, cuando Arduino lee una señal analógica (como un potenciómetro en el pin A0), obtiene un número entre 0 y 1023. Sin embargo, la mayoría de las veces necesitas usar ese valor en rangos diferentes, como lo que vamos a hacer ahora. Vamos a transformar los valores del potenciómetro en una escala de 0 a 255. Para ello, vamos a utilizar la función ``map``. Esta se utiliza de la siguiente manera: ``map(valorpot, 0, 1023, 0, 255);``
+Este reto en muy sencillo, es el previo paso al reto siguiente. Tenemos que reutilizar todo lo del reto anterior, pero incluyendo un nuevo comando, el mapeado. El mapeado consiste en convertir o escalar un valor desde un rango original a un rango diferente. Por defecto, cuando Arduino lee una señal analógica (como un potenciómetro en el pin A0), obtiene un número entre 0 y 1023. Sin embargo, la mayoría de las veces necesitas usar ese valor en rangos diferentes, como lo que vamos a hacer ahora. Vamos a transformar los valores del potenciómetro en una escala de 0 a 255. Para ello, vamos a utilizar la función ``map``. Esta se utiliza de la siguiente manera: ``map(valorpot, 0, 1023, 0, 255);``. Esto transforma los valores que que lee el potenciómetro, como pone en ``valorpot`` al principio, posteriormemte transformando los valores de 0 a 1023 del potenciómetro de 0 a 255 de lo que vamos a utilizar. Después, con el mapeado, lo que salga, se incluye dentro de una variable que deberíamos de haber creado. Vamos a llamarla bombilla: ``int bombilla;``. Ahí meteremos lo de mapeado: ``bombilla=map(valorpot, 0, 1023, 0, 255);``.
+
+Vale, ahora utilizamos ponemos todo lo del reto anterior en su correspondiente sitio, incluyendo la variable ``bombilla`` de la que hemos hablado antes e incluyendo la función ``map`` justo debajo de la línea de ``analogRead`` (``Map`` y ``analogRead`` dentro del ``void loop``, obviamente). Lo único que habría que cambiar finalmente es que en ``Serial.println`` del monitor, pongamos la varaible bombilla para imprimir, quedando así: ``Serial.println(bombilla);``. Con esto, se imprimirán en el monitor serie valores del 0 al 255 transformando respecto a los valores del potenciómetro. 
+
+Aquí debajo vemos el código completo de cómo quedaría: 
+
+<p align="center">
+<img src="Imágenes/CÓDIGO RETO 4.png" width="400" height="450" />
+</p>
+
+Y aquí un vídeo de como funciona con el monitor serie:
+
+[![](https://img.youtube.com/vi/)](https://www.youtube.com/watch?v=) 
 
 # Reto 5: Encendido progresivo de un diodo LED con un potenciómetro, utilizando Duty Cycle.
 
