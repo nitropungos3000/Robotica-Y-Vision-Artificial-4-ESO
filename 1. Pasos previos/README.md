@@ -127,6 +127,7 @@ Y aquí un vídeo de como funciona con el monitor serie:
 
 # Reto 5: Encendido progresivo de un diodo LED con un potenciómetro, utilizando Duty Cycle.
 
+Para este último reto antes del primer reto no guiado, vamos a utilizar todo lo aprendido anteriormente, sobre todo con las prácticas del potenciómetro. 
 
 
 
