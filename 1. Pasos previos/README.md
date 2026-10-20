@@ -111,6 +111,8 @@ Y aquí tenemos un vídeo de cómo funciona el montaje y cómo se ven en el moni
 
 # Reto 4: Mapeado de valores con potenciómetro
 
+Este reto en muy sencillo, es el previo paso al reto siguiente. Tenemos que reutilizar todo lo del reto anterior, pero incluyendo un nuevo comando, el mapeado. El mapeado consiste en convertir o escalar un valor desde un rango original a un rango diferente. Por defecto, cuando Arduino lee una señal analógica (como un potenciómetro en el pin A0), obtiene un número entre 0 y 1023. Sin embargo, la mayoría de las veces necesitas usar ese valor en rangos diferentes, como lo que vamos a hacer ahora. Vamos a transformar los valores del potenciómetro en una escala de 0 a 255. Para ello, vamos a utilizar la función ``map``. Esta se utiliza de la siguiente manera: ``map(valorpot, 0, 1023, 0, 255);``
+
 # Reto 5: Encendido progresivo de un diodo LED con un potenciómetro, utilizando Duty Cycle.
 
 
