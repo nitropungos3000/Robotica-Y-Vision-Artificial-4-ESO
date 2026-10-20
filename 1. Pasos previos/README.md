@@ -104,6 +104,15 @@ Así quedaría finalmente el código:
 </p>
 
 
+Y aquí tenemos un vídeo de cómo funciona el montaje y cómo se ven en el monitor serie los valores del potenciómetro:
+
+[![](https://img.youtube.com/vi/)](https://www.youtube.com/watch?v=) 
+
+
+# Reto 4: Mapeado de valores con potenciómetro
+
+# Reto 5: Encendido progresivo de un diodo LED con un potenciómetro, utilizando Duty Cycle.
+
 
 
 
