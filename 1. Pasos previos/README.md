@@ -148,7 +148,7 @@ Aquí podemos ver cómo quedaría el código completo:
 
 Y por aquí un vídeo del montaje y del LED variando su luminosidad girando el potenciómetro:
 
-[![](https://img.youtube.com/vi/)](https://www.youtube.com/watch?v=) 
+[![](https://img.youtube.com/shorts/lNvYDDDU6xU)](https://youtube.com/shorts/lNvYDDDU6xU) 
 
 https://kio4.com/arduino/6pwm.htm
 
