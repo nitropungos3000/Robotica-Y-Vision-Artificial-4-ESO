@@ -108,6 +108,7 @@ Y aquí tenemos un vídeo de cómo funciona el montaje y cómo se ven en el moni
 
 [![](https://img.youtube.com/vi/)](https://www.youtube.com/watch?v=) 
 
+https://kio4.com/arduino/5potenciometro.htm
 
 # Reto 4: Mapeado de valores con potenciómetro
 
@@ -125,12 +126,29 @@ Y aquí un vídeo de como funciona con el monitor serie:
 
 [![](https://img.youtube.com/vi/)](https://www.youtube.com/watch?v=) 
 
+https://kio4.com/arduino/5b_mapear.htm
+
 # Reto 5: Encendido progresivo de un diodo LED con un potenciómetro, utilizando Duty Cycle.
 
-Para este último reto antes del primer reto no guiado, vamos a utilizar todo lo aprendido anteriormente, sobre todo con las prácticas del potenciómetro. 
+Para este último reto antes del primer reto no guiado, vamos a utilizar todo lo aprendido anteriormente, sobre todo con las prácticas del potenciómetro. Vamos a necesitar cables, un potenciómetro, un diodo LED y una placa. Vamos a introducir dos nuevos conceptos que nos serán de mucha utilidad, tanto para esta práctica como para posteriores. Durante estas prácticas hemos visto que podemos conectar componentes digitales a los 13 pines digitales superiores de la placa, y también componentes analógicos en los pines analógicos inferiores. Nosotros queremos regular la luminosidad del LED, pero claro, el componente solo tiene dos valores, por lo tanto es digital, no podemos utilizar los pines analógicos. Para ello utilizamos el PWM (Modulación por Ancho de Pulso). Este son unos pines digitales que te permiten simular la salida analógico mediante pulsos digitales rápidos (de entre 0V y 5V, ya que sigue siendo un componente digital). Nos encontramos con 6 pines digitales PWM (pin 3, 5, 6, 9, 10 y 11. Podemos identificarlos porque al lado del número tienen una virgulilla), en los que vamos a conectar nuestro LED. Para esta práctica lo conecté en el pin 6. 
 
+Perfecto, ahora pasamos al Duty Cycle. Este es el porcentaje de tiempo en que la señal que se envía al componente que sea (en este caso un LED) está en ``HIGH``. Como Arduino no puede dar voltajes intermedios (solo da 0V o 5V), usa el Duty Cycle para engañar a los componentes haciendo parpadeos tan rápidos que el ojo humano no los nota. El resultado es un voltaje promedio. Siempre parpadea a la misma frecuencia (490 Hz o 980 Hz según el pin), pero varía la duración de cada parpadeo, por lo tanto, cambia el voltaje promedio, cuanto más bajo sea ese voltaje, más tenue se verá la luz. No debemos confundir estos conceptos. Los valores del Duty Cycle van del 0 al 255, es decir, tiene 256 valores.
 
+Ahora pasamos a aplicar esto al código. Para empezar, debemos de crear 4 variables: una la llamaremos LED1, LED6 o como queráis y le ponéis el pin en el que la hayáis colocado (``int LED=6;``); otra, donde digamos en qué pin va el potenciómetro (``int pot=A0;``), la siguiente, la de los valores del potenciómetro (``int valorpot;``), por último, una variable llamada dutycyle (``int dutycycle;``).
 
+Ya tenemos creadas nuestras variables, ahora pasamos al ``void setup``. En este caso, declaramos el pin en el que está el LED con ``pinMode`` y ponemos el ``Serial.begin`` para el monitor serie. 
 
+Ahora tenemos el ``void loop``. En la práctica anterior, aprendimos a utilizar el mapeado. En esta la vamos a aplicar transformando los valores del potenciómetro (de 0 a 1023) respecto a los valores de Duty Cycle y PWM (0 a 255). Así podremos controlar la luminosidad del LED con nuestro potenciómetro. Primero, colocamos la lectura de los valores del potenciómetro dentro de la variables ``valorpot`` utilizando ``analogRead``. Segundo, mapeamos los valores con la función ``map`` y los metemos en la variable ``dutycycle``, quedando así: ``dutycycle=map(valorpot, 0, 1023, 0, 255);``. Tercero, utilizamos el comando ``analogWrite``, que lo que hace es enviarle al LED la señal de que adopte ese valor, en vez de leer los valores los recibe y los adopta (en este caso de 0 a 255 al utilizar Duty Cycle, ya veremos que con otros componentes cambia). Para ello, debemos de escribir lo siguiente: ``analogWrite (LED, dutycycle);``. Aquí le estamos diciendo que el LED escriba de manera analógica los valores que se recojan en la variable ``dutycycle``. Y ,finalmente, por último en ``Serial.println``, colocamos la variable ``dutycycle`` para ver los valores transformados en el monitor serie.
 
+Aquí podemos ver cómo quedaría el código completo:
+
+<p align="center">
+<img src="Imágenes/CÓDIGO RETO 5.PNG" width="400" height="450" />
+</p>
+
+Y por aquí un vídeo del montaje y del LED variando su luminosidad girando el potenciómetro:
+
+[![](https://img.youtube.com/vi/)](https://www.youtube.com/watch?v=) 
+
+https://kio4.com/arduino/6pwm.htm
 
