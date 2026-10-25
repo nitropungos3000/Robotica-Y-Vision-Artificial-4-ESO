@@ -172,4 +172,7 @@ Por aquí podemos ver el código completo de nuestro reto:
 <img src="Imágenes/CÓDIGO RETO NO DIRIGIDO 1.2.png" width="400" height="450" />
 </p>
 
+Vamos a ir paso a paso:
+
+·En primer lugar tenemos la declaración de todas las variables que se han utilizado para este reto. A cada LED le hemos hecho una variable declarando el pin en el que se encuentra (obviamente tiene que ser un pin PWM, si no esta práctica no serviriría de nada). Posteriormente, hemos creado en conjunto a cada variable de los diodos una variable dutycycle para cada LED, simplemente la variable se llamaba dutycycle con el número que correspondiera a cada LED (Ejemplo: ``int dutycycle1;``).
 
