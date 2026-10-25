@@ -158,4 +158,18 @@ Para esta práctica no dirigida (sin ayuda del profesor), hemos aplicado todo lo
 
 La práctica es muy básica pero hay que tener claros todos los conceptos para poder realizarla. Además, hemos introoducido los llamados valores frontera. Estos son, en pocas palabras, los valores mínimos y máximos que una variable, un sensor o un actuador pueden alcanzar. En este caso, los vamos a utilizar para mapear los valores del portenciómetro. Debemos de dividir los valores de este entre los 5 diodos y establecer una serie de rangos (se puede hacer exacto o aproximando, como se prefiera). Con rangos me refiero a un valor mínimo y un máximo, por ejemplo de 234 hasta 567. Cuando tengamos esos rangos, debemos crear una serie de ``if`` para poder mapear los valores del potenciómetro de cada uno de los rangos respecto a los 255 valores de cada diodo. Se verá mejor ahora con el código completo. 
 
+Por aquí podemos ver el código completo de nuestro reto: 
+
+<p align="center">
+<img src="Imágenes/CÓDIGO RETO NO DIRIGIDO 1.png" width="400" height="450" />
+</p>
+
+<p align="center">
+<img src="Imágenes/CÓDIGO RETO NO DIRIGIDO 1.1.png" width="400" height="450" />
+</p>
+
+<p align="center">
+<img src="Imágenes/CÓDIGO RETO NO DIRIGIDO 1.2.png" width="400" height="450" />
+</p>
+
 
