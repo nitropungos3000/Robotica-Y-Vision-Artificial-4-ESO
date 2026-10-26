@@ -106,9 +106,9 @@ Así quedaría finalmente el código:
 
 Y aquí tenemos un vídeo de cómo funciona el montaje y cómo se ven en el monitor serie los valores del potenciómetro:
 
-[![](https://img.youtube.com/vi/)](https://www.youtube.com/watch?v=) 
+[![](https://img.youtube.com/vi/u_LzLcUyPQk/0.jpg)](https://www.youtube.com/watch?v=u_LzLcUyPQk)
 
-https://kio4.com/arduino/5potenciometro.htm
+Este reto corresponde al apartado 5 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](https://kio4.com/arduino/5potenciometro.htm)
 
 # Reto 4: Mapeado de valores con potenciómetro
 
@@ -124,9 +124,9 @@ Aquí debajo vemos el código completo de cómo quedaría:
 
 Y aquí un vídeo de como funciona con el monitor serie:
 
-[![](https://img.youtube.com/vi/)](https://www.youtube.com/watch?v=) 
+[![](https://img.youtube.com/vi/FqHJXZcOIXY/0.jpg)](https://www.youtube.com/watch?v=FqHJXZcOIXY)
 
-https://kio4.com/arduino/5b_mapear.htm
+Este reto corresponde al apartado 5b de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](https://kio4.com/arduino/5b_mapear.htm) 
 
 # Reto 5: Encendido progresivo de un diodo LED con un potenciómetro, utilizando Duty Cycle.
 
@@ -148,9 +148,9 @@ Aquí podemos ver cómo quedaría el código completo:
 
 Y por aquí un vídeo del montaje y del LED variando su luminosidad girando el potenciómetro:
 
-[![](https://img.youtube.com/shorts/lNvYDDDU6xU)](https://youtube.com/shorts/lNvYDDDU6xU) 
+[![](https://img.youtube.com/vi/ZORLppsyEgE/0.jpg)](https://www.youtube.com/watch?v=ZORLppsyEgE)
 
-https://kio4.com/arduino/6pwm.htm
+Este reto corresponde al apartado 6 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](https://kio4.com/arduino/6pwm.htm) 
 
 # Reto no dirigido 1: Encendido progresivo de 5 diodods LED usando un potenciómetro.
 
@@ -176,3 +176,4 @@ Vamos a ir paso a paso:
 
 ·En primer lugar tenemos la declaración de todas las variables que se han utilizado para este reto. A cada LED le hemos hecho una variable declarando el pin en el que se encuentra (obviamente tiene que ser un pin PWM, si no esta práctica no serviriría de nada). Posteriormente, hemos creado en conjunto a cada variable de los diodos una variable dutycycle para cada LED, simplemente la variable se llamaba dutycycle con el número que correspondiera a cada LED (Ejemplo: ``int dutycycle1;``).
 
+[![](https://img.youtube.com/vi/Mg_up4jKXAc/0.jpg)](https://www.youtube.com/watch?v=Mg_up4jKXAc)
