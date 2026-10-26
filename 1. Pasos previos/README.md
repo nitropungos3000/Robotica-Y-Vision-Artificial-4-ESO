@@ -103,6 +103,11 @@ Así quedaría finalmente el código:
 <img src="Imágenes/CÓDIGO RETO 3.png" width="400" height="450" />
 </p>
 
+Aquí podemos ver el montaje del reto:
+
+<p align="center">
+<img src="Imágenes/MONTAJE RETO 3 Y 4.jpg" width="500" height="400" />
+</p>
 
 Y aquí tenemos un vídeo de cómo funciona el montaje y cómo se ven en el monitor serie los valores del potenciómetro:
 
@@ -121,6 +126,8 @@ Aquí debajo vemos el código completo de cómo quedaría:
 <p align="center">
 <img src="Imágenes/CÓDIGO RETO 4.PNG" width="400" height="450" />
 </p>
+
+No muestro el montaje en este caso porque es el mismo que el del reto 3, se puede ver más arriba.
 
 Y aquí un vídeo de como funciona con el monitor serie:
 
@@ -144,6 +151,12 @@ Aquí podemos ver cómo quedaría el código completo:
 
 <p align="center">
 <img src="Imágenes/CÓDIGO RETO 5.PNG" width="400" height="450" />
+</p>
+
+También observamos el montaje del reto:
+
+<p align="center">
+<img src="Imágenes/MONTAJE RETO 5.jpg" width="500" height="400" />
 </p>
 
 Y por aquí un vídeo del montaje y del LED variando su luminosidad girando el potenciómetro:
@@ -174,6 +187,18 @@ Por aquí podemos ver el código completo de nuestro reto:
 
 Vamos a ir paso a paso:
 
-·En primer lugar tenemos la declaración de todas las variables que se han utilizado para este reto. A cada LED le hemos hecho una variable declarando el pin en el que se encuentra (obviamente tiene que ser un pin PWM, si no esta práctica no serviriría de nada). Posteriormente, hemos creado en conjunto a cada variable de los diodos una variable dutycycle para cada LED, simplemente la variable se llamaba dutycycle con el número que correspondiera a cada LED (Ejemplo: ``int dutycycle1;``).
+·En primer lugar tenemos la declaración de todas las variables que se han utilizado para este reto. A cada LED le hemos hecho una variable declarando el pin en el que se encuentra (obviamente tiene que ser un pin PWM, si no esta práctica no serviriría de nada, por ejemplo ``int LED2=5;``). Posteriormente, hemos creado en conjunto a cada variable de los diodos una variable dutycycle para cada LED, simplemente la variable se llamaba dutycycle con el número que correspondiera a cada LED (Ejemplo: ``int dutycycle1;``). Obviamente, también he creado una variable con el pin del potenciómetro y otra para guardar sus valores (``int pot=A0;`` e ``int valorpot;``).
 
+·Después, nos hemos ido al ``void setup``. En este, hemos declarado únicamente los pines en el que se encuentra cada LED utilizando las variales anteriores (como ejemplo ``pinMode(LED3, OUTPUT);``) , además del clásico ``Serial.begin(9600)``.
+
+·Para continuar finalmente con la última parte del código, tenemos el ``void loop``. En este el código es muy sencillo, pero muy repetitivo. Primero, declaramos que dentro de la variable ``valorpor`` se guarden todos los valores que lea el potenciómetro (``valorpot=analogRead(pot)``) y que en el monitor serie se impriman los valores de este (``(Serial.println(valorpot)``). Posteriormente, para utilizar los valores frontera, en este caso vamos a aplicarlos con la función ``if``. ¿Y qué vamos a hacer? Muy sencillo. Vamos a poner un ``if``, que tenga como condición que si el valor del potenciómetro es igual a 0, todos los diodos estén apagados, repitiendo ``digitalWrite(LEDx, LOW)`` con todos los diodos. Posteriormente, debemos poner otro ``if``, en el que pongamos la condición de que si ``valorpot`` es mayor o igual que 1 y menor que 199, haga el mapeado de esos valores del potenciómetro respecto de 0 a 255 de cada LED. Para poner dos condiciones dentro de un mismo ``if``, debemos poner ``&&``. Quedaría así: ``if (valorpot >=1 && valorpot < 199) {}``. Ahora, dentro de ese ``if``, debemos de escribir que haga el mapeado de esos valores frontera que hemos estipulado del potenciómetro (después ajustando y subiendo con cada uno de los diodos) respecto a los valores de cada LED y que lo meta en la variable ``dutycyclex`` que corresponda con cada número de LED. Cuando tengamos eso, depsués debemos poner que escriba el valor analógico del diodo utilizando los valores que se introduzcan en la variable ``dutycycle``. Podemos verlo así: ``dutycycle1=map(valorpot, 1, 199, 0, 255);`` | ``analogWrite(LED1, dutycycle1);``. Después de escribir estos dos, para que no haya errores, le decimos a la placa que los demás diodos se apaguen. ¡OJO! Esto solo se hace con el primer diodo, con los demás solo se le dice que se apaguen los siguientes, es decir, a los que todavía no se les ha dado la orden de encenderse. Quiero decir, cuando el segundo LED se encienda, solo debemos decir que se apagen el 3, 4 y 5; cuando se encienda el tercero, solo se apagan 4 y 5; y cuando se encienda el último no se apaga ninguno. Para asegurarnos que el diodo después de ``if`` correspondiente queda encendido, debemos poner otro ``if`` en el que pongamos la condición de que cuando el valor del potenciómetro alcance el valor inmediatamente superior al valor frontera anterior que hemos puesto en el ``if`` del mapeado, debemos decirle que escriba el valor del diodo en cuestión utilizando de nuevo la variable ``dutycycle`` que le correpsonda al diodo, porque como va a encontrarse en su valor máximo, se va a quedar encendido. Se vería así: ``if (valorpot==200){ analogWrite(LED1, dutycycle1); }. Esto se debe hacer con todos los diodos. Todos estos pasos en los que he puesto como ejemplo al diodo 1 se deben hacer con todos los diodos, quedando como el código que podemos ver más arriba.
+
+Por aquí podemos ver una foto del montaje del reto:
+
+<p align="center">
+<img src="Imágenes/MONTAJE RETO NO DIRIGIDO 1.jpg" width="500" height="400" />
+</p>
+
+Y por aquí la grabación del mismo:
+ 
 [![](https://img.youtube.com/vi/Mg_up4jKXAc/0.jpg)](https://www.youtube.com/watch?v=Mg_up4jKXAc)
