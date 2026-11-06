@@ -202,3 +202,6 @@ Por aquí podemos ver una foto del montaje del reto:
 Y por aquí la grabación del mismo:
  
 [![](https://img.youtube.com/vi/Mg_up4jKXAc/0.jpg)](https://www.youtube.com/watch?v=Mg_up4jKXAc)
+
+# Reto 6: Encendido de LED detectando según valor frontera referente a la distancia con Ultrasonido
+Para este reto, introducimos un componente nuevo, el ultrasonido. Para trabajar con él, primero debemos de saber qué es lo que es y cómo funciona. El sensor ultrasónico es un componente electrónico que utiliza ondas acústicas o sonoras cuya frecuencia está por encima del límite perceptible por el oído humano, de aproximadamente 20,000 Hz (los llamados ultrasonidos) para medir la distancia a la que se encuentra un objeto físico, funcionando de manera similar al sonar de un murciélago
