@@ -232,6 +232,6 @@ Ahora explicado el sensor, voy a proceder a explicar el funcionamiento del progr
 Aquí podemos ver una foto del mismo en el que se pueden ver los diferentes elementos de forma correcta y ordenada:
 
 <p align="center">
-<img src="" width="500" height="400" />
+<img src="Imágenes/Códigos/CÓDIGO RETO 6.png" width="400" height="500" />
 </p>
 
