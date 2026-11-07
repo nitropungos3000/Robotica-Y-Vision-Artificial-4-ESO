@@ -214,8 +214,24 @@ Este sensor consta de 4 pines:
 
 | Pin | Utilidad |
 | --- | --- |
-| VCC | Conexión al pin de 5V de Arduino para el suministro de energía del sensor |
-| Echo | Pin de salida que devuelve un pulso cuyo ancho es proporcional al tiempo que tarda el sonido en rebotar y regresar | 
-| Trigger (o Trig) | Pin de entrada por el que se envía un pulso eléctrico de 10 microsegundos para iniciar la medición |
-| GND | Conexión al pin GND o tierra del Arduino |
+| VCC | Conexión al pin de 5V de Arduino para el suministro de energía del sensor. |
+| Echo | Pin de salida que devuelve un pulso cuyo ancho es proporcional al tiempo que tarda el sonido en rebotar y regresar. Debe conectarse a uno de los pines digitales de la placa. | 
+| Trigger (o Trig) | Pin de entrada por el que se envía un pulso eléctrico de 10 microsegundos para iniciar la medición. Ocurre lo mismo que con el pin Echo, debe conectarse a un pin digital. |
+| GND | Conexión al pin GND o tierra del Arduino. |
+
+Ahora explicado el sensor, voy a proceder a explicar el funcionamiento del programa junto con el código, para el que vamos a utilizar una serie de conceptos nuevos. Además, también vamos a utilizar un LED que nos ayudará también a comprobar el funcionamiento del sensor. Para ello, vamos por partes.
+
+·Antes de empezar el código, debemos incluir una librería. Este concepto es conocido como un programa muy complejo simplificado por otra persona. Es decir, un código que puede tener cientos de líneas se resume en unas pocas. En este caso, vamos a utilizarla con el sensor. Para obtener la librería del ultrasónico, podemos hacer dos cosas: buscarla en el selector de librrías del propio IDE de Arduino o descargar la carpeta e incluirla dentro de la subcarpeta ``libraries``, dentro de la carpeta ``Arduino``, que es lo que hemos realizado en este caso, obteniéndola de la página que hemos utilizado para anteriores retos, kio4.com.
+
+·Posteriormente, al principio del código, debemos escribir ``#include <Ultrasonic.h>``. Esta línea incluye la librería. Ahora, debemos crear una serie de variables. Como ``trig`` y ``echo`` se conectan a pines digitales, le creamos una varaible a cada uno y le ponemos el nombre que queramos, diciendo también en qué pin se encuentran (Ej.: ``int trig=1;``). Después, como vamos a utilizar un LED, le creamos su variable correspondiente como ya sabemos. La última variable es una en la que guardemos los valores que detecte el sensor, igual que si guardaramos los valores de un potenciómetro (Ej.: ``int lecturasoniditos;``). Por último antes del ``void setup``. debemos declarar nuestro sensor en sí, otorgándole el nombre que nosotros queramos y declarando los pines de ``trig`` y ``echo``. Estos, posteriormente, no tenemos que decir nada de ellos en el  ``void setup``, debido a que ya están indicados. Lo primero que debemos de poner es ``Ultrasonic``, después darle el nombre que queramos (Ej.: ``Ratón``), y por último entre paréntesis colocar los nombres de las variables de los pines ``trig`` y ``echo``, siguiendo este mismo orden, si no no funcionará, seguido de un 60000, para que este sensor detecte distancias mayores de 51 cm. Así quedaría completo: ``Ultrasonic Ratón (trig, echo, 60000);``.
+
+·Ahora pasamos al ``void setup``, en el cual lo único que tenemos que poner es la declaración del pin del LED y el típico ``Serial.begin(9600)`` para nuestro monitor serie. Nada más.
+
+·Finalmente, pasamos al ``void loop``. Este es muy corto, donde lo único que tenemos que poner sería, lo primero, que los valores que lea el sensor los incluya en la variable ``lecturasoniditos`` o el nombre que le hayamos puesto. Para esto, utilizamos una función parecida a ``digitalRead`` o ``analogRead``, la cual es ``nombredetusensor.read(CM)``. Hace exactamente la misma función, solo que hay que poner el nombre que le hemos puesto a nuestro sensor anteriormente y después en qué unidad de medida nos otorga los valores, en este caso en centímetros, por eso ponemos ``(CM)`` al final. Quedaría tal que así: ``lecturasoniditos=Ratón.read(CM);``. Es muy sencillo de programar nuestro sensor ultrasónico con la librería. Después, lo único que tenemos que hacer para que nuestro LED se encienda cuando el ultrasonido lea valores menores a un número (un valor frontera, concepto que ya conocemos), incluímos un ``if``, como siempre. En este, debemos decir que si el valor de la variable ``lecturasoniditos`` es menor que, por ejemplo, 15, se encienda el LED y nos ponga en el monitor serie ``ALERTAAAAAAAAAAAAAAA``. Obviamente, para imprimir valores en el monitor serie ya sabemos que tenemos que utilizar ``Serial.println(lo que sea)`` (ln ya sabemos que lo que hace es ponerlo en la línea siguiente). Aunque, para escrbir texto, dentro del paréntesis debemos de poner dos comillas, y en el interior de estas el texto (Ej.: `` Serial.println("ALERTAAAAAA");``). Por último, para que el LED se encuentre apagado si esa condición no se cumple, podemos poner un ``else``, que es lo mismo que un ``if``, pero que únicamente realiza la acción cuando este ``if`` no se cumple. También podemos poner directamente otro ``if`` diciendo que si la variable es igual o mayor que 15 se apague el LED. Que no se nos olvide que también podemos incluir un pequeño ``delay`` entre lecturas para no sobrecargar nada, con 100 milisegundos basta. Y ese sería todo el código del programa. 
+
+Aquí podemos ver una foto del mismo en el que se pueden ver los diferentes elementos de forma correcta y ordenada:
+
+<p align="center">
+<img src="" width="500" height="400" />
+</p>
 
