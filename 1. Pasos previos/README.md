@@ -229,10 +229,16 @@ Ahora explicado el sensor, voy a proceder a explicar el funcionamiento del progr
 
 ·Finalmente, pasamos al ``void loop``. Este es muy corto, donde lo único que tenemos que poner sería, lo primero, que los valores que lea el sensor los incluya en la variable ``lecturasoniditos`` o el nombre que le hayamos puesto. Para esto, utilizamos una función parecida a ``digitalRead`` o ``analogRead``, la cual es ``nombredetusensor.read(CM)``. Hace exactamente la misma función, solo que hay que poner el nombre que le hemos puesto a nuestro sensor anteriormente y después en qué unidad de medida nos otorga los valores, en este caso en centímetros, por eso ponemos ``(CM)`` al final. Quedaría tal que así: ``lecturasoniditos=Ratón.read(CM);``. Es muy sencillo de programar nuestro sensor ultrasónico con la librería. Después, lo único que tenemos que hacer para que nuestro LED se encienda cuando el ultrasonido lea valores menores a un número (un valor frontera, concepto que ya conocemos), incluímos un ``if``, como siempre. En este, debemos decir que si el valor de la variable ``lecturasoniditos`` es menor que, por ejemplo, 15, se encienda el LED y nos ponga en el monitor serie ``ALERTAAAAAAAAAAAAAAA``. Obviamente, para imprimir valores en el monitor serie ya sabemos que tenemos que utilizar ``Serial.println(lo que sea)`` (ln ya sabemos que lo que hace es ponerlo en la línea siguiente). Aunque, para escrbir texto, dentro del paréntesis debemos de poner dos comillas, y en el interior de estas el texto (Ej.: `` Serial.println("ALERTAAAAAA");``). Por último, para que el LED se encuentre apagado si esa condición no se cumple, podemos poner un ``else``, que es lo mismo que un ``if``, pero que únicamente realiza la acción cuando este ``if`` no se cumple. También podemos poner directamente otro ``if`` diciendo que si la variable es igual o mayor que 15 se apague el LED. Que no se nos olvide que también podemos incluir un pequeño ``delay`` entre lecturas para no sobrecargar nada, con 100 milisegundos basta. Y ese sería todo el código del programa. 
 
-Aquí podemos ver una foto del mismo en el que se pueden ver los diferentes elementos de forma correcta y ordenada:
+Aquí podemos ver una foto del mismo en el que se pueden ver los diferentes comandos de forma correcta y ordenada:
 
 <p align="center">
 <img src="Imágenes/Códigos/CÓDIGO RETO 6.png" width="400" height="500" />
+</p>
+
+Después, una imagen del montaje del reto:
+
+<p align="center">
+<img src="Imágenes/MONTAJE RETO 6 Y RETO NO DIRIGIDO 3.jpg" width="500" height="400" />
 </p>
 
 Y por aquí un vídeo del funcionamiento en vivo del reto: 
@@ -240,3 +246,28 @@ Y por aquí un vídeo del funcionamiento en vivo del reto:
 [![](https://img.youtube.com/vi/EXzA4VjIh4Y/0.jpg)](https://www.youtube.com/watch?v=EXzA4VjIh4Y)
 
 Este reto corresponde al apartado 25 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](https://kio4.com/arduino/25ultrasonido.htm) 
+
+# Reto no dirigido 2: Gestión de valores frontera de sensor ultrasónico con potenciómetro
+Para esta práctica, no vamos a incluir nada nuevo, únicamente vamos a utilizar conceptos anteriores. Desde el anterior montaje, lo único que vamos a añadir va a ser un potenciómetro, para gestionar los valores frontera que va a tener el ultrasonido para encender el LED.
+
+·Dejamos la librería y las variables de la anterior práctica, únicamente incluyendo la variable del pin del potenciómetro, otra en la que vamos a guardar sus valores y la última para el mapeado (Ej.: ``int mapea;``), recordando que este componente es analógico. 
+
+·En el ``void setup`` dejamos todo igual.
+
+·En el ``void setup``, dejamos como estaba la inclusión de la lectura de valores del ultrasonido en nuestra variable y dejamos la impresión en el monitor serie de nuestros valores. Añadimos en la variable de los valores del potenciómetro la lectura de estos con el típico ``analogRead(pot)``. El siguiente paso es el mapeado. Se podrá cuestionar por qué se utiliza el mapeado, pero sencillamente es porque los valores que lea el potenciómetro los vamos a transformar en la distancia que queramos del ultrasonido. En este caso, he puesto como máximo 40 cm. Es decir, más claro, tenemos que transformar los 1024 valores del potenciómetro respecto a la distancia que queremos utilizar en el ultrasonido. Quedaría así: ``mapea=(valorpot, 0, 1023, 0, 40);``. Así conseguimos que, por ejemplo, 563 en el potenciómetro sea 23 cm (es inventado, no exacto). Para terminar, ponemos los diferentes ``if``, sustituyendo el valor anterior que teníamos (Ej.: 15), y le ponemos el nombre de la variable del mapeo, quedando así: ``if(lecturasoniditos<mapea)``. Después, ponemos un ``else`` o un ``if`` al contrario que el anterior. Finalizamos el código poniendo algún ``delay`` entre lecturas si se prefiere y cerramos llaves. 
+
+Debajo podemos ver el código de esta práctica:
+
+<p align="center">
+<img src="Imágenes/Códigos/CÓDIGO RETO NO DIRIGIDO 2.png" width="400" height="500" />
+</p>
+
+Aquí tenemos una imagen del montaje de la práctica: 
+
+<p align="center">
+<img src="Imágenes/MONTAJE RETO NO DIRIGIDO 2.jpg" width="500" height="400" />
+</p>
+
+Un vídeo del funcionamiento de la misma: 
+
+[![](https://img.youtube.com/vi/s4ylDUbXwsg/0.jpg)](https://www.youtube.com/watch?v=s4ylDUbXwsg)
