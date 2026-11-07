@@ -271,3 +271,25 @@ Aquí tenemos una imagen del montaje de la práctica:
 Un vídeo del funcionamiento de la misma: 
 
 [![](https://img.youtube.com/vi/s4ylDUbXwsg/0.jpg)](https://www.youtube.com/watch?v=s4ylDUbXwsg)
+
+# Reto no dirigido 3: Regular intensidad del LED según la distancia que lea el sensor ultrasónico
+Para este último reto con ultrasonidos, solo necesitamos el LED y el sensor de antes, y quitamos el potenciómetro. Lo que vamos a hacer es, utilizando el PWM y los valores del ultrasonido, mapear todo y transformar las distancias que lea el sensor en los 256 valores del LED. Para ello, ya sabemos que el LED tiene que colocarse en un pin compatible con PWM, por ejemplo el 6, y declararlo así en su variable. El objetivo es que, a menor distancia leída por el ultrasonido, más luminosidad del diodo.
+
+·Lo primero, es dejar la librería, las variables de los pines del ultrasonido, la de la lectura de sus valores, la de LED y la del mapeo. Las dos del potenciómetro las eliminamos. Recordemos que en la variable del LED debemos de poner un pin compatible con PWM.
+
+·Después, en el ``void setup`` dejamos lo mismo, igual que en los dos últimos retos. 
+
+·Por último, en el ``void loop``, lo único que debemos cambiar es el mapeo. En este, debemos poner primero la variable en la que queremos incluir el mapeo, obviamente; después, indicar que la variable que vamos a "modificar" es la de la lectura de los valores del ultrasonido; y por último, poner los valores, es decir, de 0 a 40 del ultrasonido (son los que he utilizado en este caso), y de 255 a 0 del LED. Lo ponemos al revés para que al leer menos distancia, se ilumine más el LED. Por último ya es escrbir ``analogWrite(LED, mapea);`` para que escriba los valores según el mapeado, añadir algún ``delay`` si queremos y cerrar llaves.
+
+Aquí tenemos una imagen del código completo:
+
+<p align="center">
+<img src="Imágenes/Códigos/CÓDIGO RETO NO DIRIGIDO 3.png" width="400" height="500" />
+</p>
+
+Y un vídeo del funcionamiento de la práctica:
+
+[![](https://img.youtube.com/vi/SiIxkbmg7vo/0.jpg)](https://www.youtube.com/watch?v=SiIxkbmg7vo)
+
+Esta vez no incluyo ninguna foto de montaje ya que es el mismo que en el reto 6, así que más arriba podemos observar la imagen.
+
