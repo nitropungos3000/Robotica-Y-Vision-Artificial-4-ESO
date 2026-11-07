@@ -24,7 +24,7 @@ if (lecturasoniditos<15){
   Serial.println("ALERTAAAAAAAAAAA");
 }
 
-if (lecturasoniditos>15){
+if (lecturasoniditos>=15){
   digitalWrite(LED, LOW);
 }
 }
