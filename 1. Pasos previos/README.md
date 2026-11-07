@@ -221,7 +221,7 @@ Este sensor consta de 4 pines:
 
 Ahora explicado el sensor, voy a proceder a explicar el funcionamiento del programa junto con el código, para el que vamos a utilizar una serie de conceptos nuevos. Además, también vamos a utilizar un LED que nos ayudará también a comprobar el funcionamiento del sensor. Para ello, vamos por partes.
 
-·Antes de empezar el código, debemos incluir una librería. Este concepto es conocido como un programa muy complejo simplificado por otra persona. Es decir, un código que puede tener cientos de líneas se resume en unas pocas. En este caso, vamos a utilizarla con el sensor. Para obtener la librería del ultrasónico, podemos hacer dos cosas: buscarla en el selector de librrías del propio IDE de Arduino o descargar la carpeta e incluirla dentro de la subcarpeta ``libraries``, dentro de la carpeta ``Arduino``, que es lo que hemos realizado en este caso, obteniéndola de la página que hemos utilizado para anteriores retos, kio4.com.
+·Antes de empezar el código, debemos incluir una librería. Este concepto es conocido como un programa muy complejo simplificado por otra persona. Es decir, un código que puede tener cientos de líneas se resume en unas pocas. En este caso, vamos a utilizarla con el sensor. Para obtener la librería del ultrasónico, podemos hacer dos cosas: buscarla en el selector de librrías del propio IDE de Arduino o descargar la carpeta e incluirla dentro de la subcarpeta ``libraries``, dentro de la carpeta ``Arduino``, que es lo que hemos realizado en este caso, obteniéndola de la página que hemos utilizado para anteriores retos, [kio4.com](https://kio4.com/arduino/25ultrasonido.htm).
 
 ·Posteriormente, al principio del código, debemos escribir ``#include <Ultrasonic.h>``. Esta línea incluye la librería. Ahora, debemos crear una serie de variables. Como ``trig`` y ``echo`` se conectan a pines digitales, le creamos una varaible a cada uno y le ponemos el nombre que queramos, diciendo también en qué pin se encuentran (Ej.: ``int trig=1;``). Después, como vamos a utilizar un LED, le creamos su variable correspondiente como ya sabemos. La última variable es una en la que guardemos los valores que detecte el sensor, igual que si guardaramos los valores de un potenciómetro (Ej.: ``int lecturasoniditos;``). Por último antes del ``void setup``. debemos declarar nuestro sensor en sí, otorgándole el nombre que nosotros queramos y declarando los pines de ``trig`` y ``echo``. Estos, posteriormente, no tenemos que decir nada de ellos en el  ``void setup``, debido a que ya están indicados. Lo primero que debemos de poner es ``Ultrasonic``, después darle el nombre que queramos (Ej.: ``Ratón``), y por último entre paréntesis colocar los nombres de las variables de los pines ``trig`` y ``echo``, siguiendo este mismo orden, si no no funcionará, seguido de un 60000, para que este sensor detecte distancias mayores de 51 cm. Así quedaría completo: ``Ultrasonic Ratón (trig, echo, 60000);``.
 
@@ -235,3 +235,8 @@ Aquí podemos ver una foto del mismo en el que se pueden ver los diferentes elem
 <img src="Imágenes/Códigos/CÓDIGO RETO 6.png" width="400" height="500" />
 </p>
 
+Y por aquí un vídeo del funcionamiento en vivo del reto: 
+
+[![](https://img.youtube.com/vi/EXzA4VjIh4Y/0.jpg)](https://www.youtube.com/watch?v=EXzA4VjIh4Y)
+
+Este reto corresponde al apartado 25 de la página con contenido y ayuda sobre Arduino que no proporcionó nuestro profesor. [Pincha aquí para más información](https://kio4.com/arduino/25ultrasonido.htm) 
