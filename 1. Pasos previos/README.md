@@ -210,3 +210,12 @@ Para este reto, introducimos un componente nuevo, el ultrasonido. Para trabajar 
 <img src="Imágenes/Imágenes adicionales/SENSOR ULTRASONIDO.jpg" width="500" height="400" />
 </p>
 
+Este sensor consta de 4 pines: 
+
+| Pin | Utilidad |
+| --- | --- |
+| VCC | Conexión al pin de 5V de Arduino para el suministro de energía del sensor |
+| Echo | Pin de salida que devuelve un pulso cuyo ancho es proporcional al tiempo que tarda el sonido en rebotar y regresar | 
+| Trigger (o Trig) | Pin de entrada por el que se envía un pulso eléctrico de 10 microsegundos para iniciar la medición |
+| GND | Conexión al pin GND o tierra del Arduino |
+
